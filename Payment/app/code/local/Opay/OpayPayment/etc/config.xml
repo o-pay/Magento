@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Opay_OpayPayment>
+			<version>2.0.0821</version>
+		</Opay_OpayPayment>
+	</modules>
+
+	<global>
+		<models>
+			<opaypayment>
+				<class>Opay_OpayPayment_Model</class>
+			</opaypayment>
+		</models>
+		<blocks>
+			<opaypayment>
+				<class>Opay_OpayPayment_Block</class>
+			</opaypayment>
+		</blocks>
+		<helpers>
+			<opaypayment>
+				<class>Opay_OpayPayment_Helper</class>
+			</opaypayment>
+		</helpers>
+	</global>
+
+	<default>
+		<payment>
+			<opaypayment>
+				<active>0</active>
+				<model>opaypayment/payment</model>
+				<title>O'Pay 整合金流</title>
+				<opay_merchant_id>2000132</opay_merchant_id>
+				<opay_hash_key>5294y06JbISpM5x9</opay_hash_key>
+				<opay_hash_iv>v77hoKGq4kWxNNIS</opay_hash_iv>
+				<opay_create_status>pending</opay_create_status>
+				<opay_success_status>processing</opay_success_status>
+				<opay_failed_status>holded</opay_failed_status>
+				<allowspecific>0</allowspecific>
+				<payment_action>sale</payment_action>
+			</opaypayment>
+		</payment>
+	</default>
+  
+    <adminhtml>
+        <translate>
+            <modules>
+                <Opay_OpayPayment>
+                    <files>
+                        <default>Opay_Payment.csv</default>
+                    </files>
+                </Opay_OpayPayment>
+            </modules>
+        </translate>
+    </adminhtml>
+
+	<frontend>
+		<routers>
+			<opaypayment>
+				<use>standard</use>
+				<args>
+					<module>Opay_OpayPayment</module>
+					<frontName>opaypayment</frontName>
+				</args>
+			</opaypayment>
+		</routers>
+        <translate>
+            <modules>
+                <Opay_OpayPayment>
+                    <files>
+                        <default>Opay_Payment.csv</default>
+                    </files>
+                </Opay_OpayPayment>
+            </modules>
+        </translate>
+	</frontend>
+</config>
