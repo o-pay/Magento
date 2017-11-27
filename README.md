@@ -14,7 +14,7 @@
  
 
 ## 2. 適用版本
-  - Magento Version 1.9.2.4
+  - Magento Version 1.9.2.1 ~ 1.9.2.4
 
 
 ## 3. 安裝導引教學
